@@ -1,0 +1,67 @@
+@import "../../variables";
+
+button {
+  cursor: pointer;
+  font-size: $size-s;
+  border-radius: $size-xs;
+  padding: $size-s $size-m;
+  min-width: 120px;
+  font-weight: bold;
+
+  &:focus {
+    outline: none;
+  }
+}
+:host{
+  display: block;
+  border: 5px solid orangered;
+
+}
+:host([type="primary"]) button{
+  background-color: red;
+  color: $text-button;
+  border: none;
+
+  &:hover {
+    background-color: $london50;
+  }
+
+  &:active {
+    background-color: $london70;
+  }
+}
+
+button[type="secundary"] {
+  background-color: $text-button;
+  color: $london-primary;
+  border-color: $london-primary;
+  border-style: solid;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+}
+
+button[type="text"] {
+  background-color: $text-button;
+  color: $london50;
+  border: none;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+}
+
+button[type="disabled"] {
+  background-color: $london50;
+  color: $text-button;
+  opacity: 0.6;
+  border: none;
+
+  &:hover {
+    cursor: not-allowed;
+  }
+
+}
